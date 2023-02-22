@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { ProovedorTema } from "./contextos/contextoTema";
+/**
+ * Para usar ContextApi al igual q ue react.router o redux
+ * debemos envolver nuestro componente princial(App) en un
+ * componente Proveerdor
+ *
+ * Esta componente lo creamos nosotrs en el archivo conxtetoTema
+ * y lo exportanmos con el nombre ProovedorTema
+ */
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ProovedorTema>
+      <App />
+    </ProovedorTema>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
